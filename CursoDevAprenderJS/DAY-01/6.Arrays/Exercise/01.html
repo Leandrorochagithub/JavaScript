@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <center><strong>EXERCISE ABOUT ARRAYS</center>
+    </p></strong>
+    <style>
+        body {
+            background-color: darkcyan;
+            font-family: arial;
+        }
+    </style>
+
+    <script>
+        let pessoa = {
+            nome: ['Bob', 'Smith'], // Array dentro de um objeto
+            idade: 32,
+            sexo: 'masculino',
+            interesses: ['música', 'esquiar'],
+            bio: function () {  // A função bio recebe...
+                alert(this.nome[0] + ' ' + this.nome[1] + ' tem ' + this.idade + ' anos de idade. Ele gosta de ' + this.interesses[0] + ' e ' + this.interesses[1] + '.');
+            },
+            saudacao: function () {
+                alert('Oi! Eu sou ' + this.nome[0] + '.');
+            }
+        };
+
+        document.write(pessoa.bio()) // Expected 'Bob Smith tem 32 anos de idade. Ele gosta de música e esquiar'
+
+        document.write(pessoa.saudacao()) // Expected 'Oi! Eu sou Bob.'
+    </script>
+</body>
+
+</html>
