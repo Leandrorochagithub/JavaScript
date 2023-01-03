@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de combustível</title>
+</head>
+<body>
+    <!--CSS-->
+    <style>
+        *{
+            margin: 0;
+        }
+        h1{
+            text-align: center;
+            margin-top: 50px;
+        }
+        body{
+            background: #f46b45;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+        .content{
+            background-color: rgba(0, 0, 0, 0.6);            
+            color: white;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 100px 600px;
+            padding: 30px 20px;
+            border-radius: 7px;
+
+        }
+        input{
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-radius: 8px;
+            padding: 4px 0px;
+            width: 100%;
+            margin-top: 5px;
+            border: none;
+        }
+        input:hover{
+            background-color:;
+            transition: 0.5s;
+            text-replace: auto;
+        }
+        .campos{
+            margin-bottom: 15px;
+        }
+        .result{
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-radius: 8px;
+            padding: 40px 0px;
+            width: 100%;
+            margin-top: 15px;
+        }
+        .btn{
+            padding: 16px 0px;
+            text-transform:uppercase;
+            font-weight: bold;
+        }
+        .btn:hover{
+            background: #f46b45;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            color: black;
+        }
+    </style>
+    <!--HTML-->
+    
+    <h1>Calculadora de consumo de combustível</h1>
+
+    <div class="content">
+    
+        <div class="campos">Digite a distância a percorrer (Km): <input type="number" name="Dist" id="Dist"> 
+        </div>
+        
+    <div class="campos"> Digite os Km/l do seu veículo (Km/l): <input type="number" name="DistVeiculo" id="DistVeiculo"> </div>
+    
+    <div class="campos"> Digite o valor do combustível (R$): <input type="number" name="Combust" id="Combust">
+    
+
+    </div>
+    
+    <!--JavaScript-->
+
+        <input class="btn" type="button" value="Calcular" onclick="calculadora()">
+
+
+    <div class="result">
+        <div id="res"></div>
+    </div>
+    
+</div>
+    
+    
+    <script>
+        var distancia= document.getElementById('Dist')
+        var distVeiculo= document.getElementById('DistVeiculo')
+        var valorCombustivel= document.getElementById('Combust')
+        
+
+        function calculadora() {
+            var distancia1= Number(distancia.value)
+        
+            var kmlVeiculo= Number(distVeiculo.value)
+        
+            var valorCombustível1= Number(valorCombustivel.value)
+        
+        var resultado= (distancia1/kmlVeiculo) * (valorCombustível1)
+        
+        var res= document.getElementById('res') 
+        res.innerHTML= `<center>Você precisa abastecer <strong>${(resultado.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))}</strong> em combustível para percorrer a distância desejada.<center>`
+    }
+    </script>
+</body>
+</html>

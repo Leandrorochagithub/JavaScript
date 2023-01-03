@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+</head>
+<body>
+
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            background-color: rgb(13, 141, 13);
+            color: white;
+            line-height: 200px; /*Texto fica verticalmente no centro*/
+            height: 200px;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+
+    <div id="area" onclick= "clique()">
+        Interaja...
+        <!--onclick é um método com função clique-->
+    </div>
+
+    <script>
+        function clique(){ // clique da função acima
+        var a= document.getElementById('area')
+        a.innerText= 'Clicou !'
+    }
+    </script>
+</body>
+</html>

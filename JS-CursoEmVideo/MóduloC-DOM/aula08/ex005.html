@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando em DOM</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgba(28, 41, 221, 0.637);
+            color: white;
+            font: normal 18pt black;
+        }
+    </style>
+
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique aqui</div>
+
+    <script>
+        var h1= document.getElementsByTagName('h1')[0]
+        h1.style.color= 'yellow'
+
+        var corpo= document.body
+        corpo.style.backgroundColor='black'
+
+        /*var p1= document.getElementsByTagName('p')[0]
+        document.write('Está escrito assim: '+p1.innerText) só o texto*/
+        
+        /*var p2= document.getElementsByTagName('p')[1]
+        document.write('Está escrito assim: '+p2.innerHTML) // com formatação*/
+
+        var d= document.getElementById('msg')
+        d.style.background= 'red'
+        /*document.getElementById('msg').innerText= 'Clique aqui, por favor...'*/
+    </script>
+</body>
+</html>
