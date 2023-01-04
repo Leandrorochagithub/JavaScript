@@ -17,7 +17,11 @@
     <script>
 var nome = prompt('Digite o seu nome:')
 document.write(`Olá, <strong>${nome}</strong>, seu nome tem ${nome.length} letras.<br>`)
-document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()}.`)
+document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()}.<br>`)
+var salário = Number(prompt(`Quanto voce recebe por mês, ${nome}?`))
+ //document.write(`Seu salário mensal é de  <strong>R$ ${salário.toFixed(2).replace('.', ',')}</strong>.`) ou
+ document.write(`Seu salário mensal é de ${salário.toLocaleString(`pt-BR`, {style: `currency`, currency: 'BRL'})}`)
+
     </script>
 </body>
 </html>

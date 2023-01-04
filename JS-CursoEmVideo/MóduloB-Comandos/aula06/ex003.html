@@ -22,11 +22,10 @@
     <p>Tudo pronto.</p>
 
     <script>
-        var n1= Number.parseInt(prompt('Digite um número: ')) // parseInt é para converter o número em um inteiro
-        var n2= parseInt(prompt('Digite outro número: '))
-        var n3= Number(prompt('Digite outro número'))
-        var n4= Number(prompt('Digite outro número'))
-        var s= n1 + n2 + n3 + n4
+        var n1= Number.parseInt(window.prompt('Digite um número: ')) // parseInt é para converter o número em um inteiro (3.8 === 3) ou parseInt(prompt('Digite outro número: '))
+        var n2= Number.parseFloat(prompt('Digite outro número')) // 3.8 === 3.8
+        var n3= Number(prompt('Digite outro número')) // 3.8 === 3.8
+        var s= n1 + n2 + n3
         alert('A soma dos números é '+ s)
         // alert('A soma dos números é ${s}')
     </script>
