@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="/móduloD-Condições/aula13-Exercícios/02/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    
+    <section>
+        <p>Ano de nascimento:
+           <input type="number" name="txtano" id="data" min='0'  required>
+        </p>
+        <div id="genero">Gênero: 
+            <input type="radio" name="opcao" id="masculino" checked>
+            <label for="masculino">Masculino</label>
+
+            <input type="radio" name="opcao" id="feminino" required>
+            <label for="feminino">Feminino</label>
+
+            <input type="radio" name="opcao" id="outro" required>
+            <label for="outro">Outro</label>
+        </div>
+
+        <p><input onclick="verificar()" type="button" value="verificar"></p>
+        <p id="result">Preencha os campos acima para verificar sua idade !</p>
+    </section>
+
+    <footer>
+        <p>&copy;Cursoemvideo</p>
+    </footer>
+
+</body>
+<script src="/móduloD-Condições/aula13-Exercícios/02/script.js"></script>
+</html>

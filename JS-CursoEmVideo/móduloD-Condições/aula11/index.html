@@ -13,10 +13,11 @@
     <div id="res">Resultado</div>
 
     <script>
-        var txtv= document.getElementById('vel')
+        // var txtv= document.getElementById('vel')
 
         function calcular(){
-            var vel= Number(txtv.value)
+            var vel= Number(document.getElementById('vel').value)  
+            // Number(txtv.value)
             var res= document.getElementById('res')
             res.innerHTML= `<P>Sua velocidade atual é <strong>${vel} Km/h</strong></p>` // Com parágrafo, espaça naturalmente.
                 if(vel > 60){
